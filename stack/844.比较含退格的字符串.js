@@ -7,24 +7,24 @@
 /**
  * 1. 处理字符串
  */
-var backspaceCompare = function(S, T) {
-  return formatString(S) === formatString(T);
-};
+// var backspaceCompare = function(S, T) {
+//   return formatString(S) === formatString(T);
+// };
 
-var formatString = function (S) {
-  if(S.length === 0) return '';
-  const reg = /[a-z]#/g;
-  do {
-    if(S[0] === '#') S = S.replace(S[0], '')
-    if(S.length > 0) {
-      const matchArr = S.match(reg)
-      if(matchArr) {
-        matchArr.forEach(item => S = S.replace(item, ''));
-      }
-    }
-  } while (S.indexOf('#') !== -1);
-  return S;
-}
+// var formatString = function (S) {
+//   if(S.length === 0) return '';
+//   const reg = /[a-z]#/g;
+//   do {
+//     if(S[0] === '#') S = S.replace(S[0], '')
+//     if(S.length > 0) {
+//       const matchArr = S.match(reg)
+//       if(matchArr) {
+//         matchArr.forEach(item => S = S.replace(item, ''));
+//       }
+//     }
+//   } while (S.indexOf('#') !== -1);
+//   return S;
+// }
 
 console.log(formatString('b'))
 
